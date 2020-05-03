@@ -28,7 +28,8 @@ const saveValidation = body => {
     Password: Joi.string()
       .min(5)
       .max(10)
-      .required()
+      .required(),
+    IsActive: Joi.bool().required()
   });
   return schema.validate(body).error;
 };
@@ -62,7 +63,8 @@ const updateValidation = body => {
     Password: Joi.string()
       .min(5)
       .max(10)
-      .required()
+      .required(),
+      IsActive: Joi.bool().required()
   });
   return schema.validate(body).error;
 };

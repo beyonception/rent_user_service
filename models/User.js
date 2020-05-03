@@ -32,6 +32,11 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  IsActive: {
+    type: Boolean,
+    required:false,
+    default: true
+  },
   CreatedBy: {
     type: String,
     required: true

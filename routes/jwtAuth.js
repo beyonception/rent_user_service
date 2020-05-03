@@ -11,7 +11,6 @@ const verifyToken = async (req, res, next) => {
       await axios
         .post(`${process.env.AUTH_SERVICE_URL}/verifyToken`, tokenDetails)
         .then(response => {
-          console.log(response);
           next();
         })
         .catch(err => {

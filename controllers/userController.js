@@ -54,7 +54,6 @@ const updateUser = async (req, res) => {
     const authData = await decodeToken(token.split(" ")[1]);
 
     req.body.UpdatedBy = authData.user._id;
-
     const updatedUser = await userService.updateUser(req.body);
 
     return res.status(200).send(updatedUser);
